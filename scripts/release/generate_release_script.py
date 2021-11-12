@@ -146,7 +146,7 @@ def main(argv=sys.argv[1:]):
             'binary_scripts': binary_scripts,
             'package_format': package_format},
         options={BANGPATH_OPT: False})
-    value = re.sub(r'^python3 ', sys.executable + ' ', value, flags=re.M)
+    value = re.sub(r'^ *python3 ', sys.executable + ' ', value, flags=re.M)
     print(value)
 
 

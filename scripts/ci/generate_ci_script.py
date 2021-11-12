@@ -162,7 +162,7 @@ def main(argv=sys.argv[1:]):
             'build_tool': args.build_tool or build_file.build_tool,
             'parameters': hook.parameters},
         options={BANGPATH_OPT: False})
-    value = re.sub(r'^python3 ', sys.executable + ' ', value, flags=re.M)
+    value = re.sub(r'^ *python3 ', sys.executable + ' ', value, flags=re.M)
     print(value)
 
 

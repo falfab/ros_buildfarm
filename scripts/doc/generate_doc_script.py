@@ -130,7 +130,7 @@ def main(argv=sys.argv[1:]):
             'scripts': scripts,
             'doc_path': doc_path},
         options={BANGPATH_OPT: False})
-    value = re.sub(r'^python3 ', sys.executable + ' ', value, flags=re.M)
+    value = re.sub(r'^ *python3 ', sys.executable + ' ', value, flags=re.M)
     print(value)
 
 
